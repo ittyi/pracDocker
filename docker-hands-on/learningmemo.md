@@ -15,14 +15,14 @@ https://docs.docker.jp/engine/reference/commandline/run.html
 - docker-alpine の メリット
   - サイズが最小限
   - ubuntu はやめてくださいみたいなこと書いてあって面白いw
-- |[Alpine Linux](https://alpinelinux.org/) は、 |[musl libc](https://musl.libc.org/) および |[BusyBox](https://www.busybox.net/) を中心に構築された Linux ディストリビューション
-- |[Alpine Linux](https://alpinelinux.org/)
+- [Alpine Linux](https://alpinelinux.org/) は、 [musl libc](https://musl.libc.org/) および [BusyBox](https://www.busybox.net/) を中心に構築された Linux ディストリビューション
+- [Alpine Linux](https://alpinelinux.org/)
   - キャッチコピーは Small. Simple. Secure. 本家もサイズの小ささとセキュリティを推している。
-- |[musl libc](https://musl.libc.org/)
+- [musl libc](https://musl.libc.org/)
   - >muslは、Linux システム コール API 上に構築された C 標準ライブラリの実装
   - >musl は軽量、高速、シンプル、無料であり、 標準への準拠と安全性の観点から正しくなるように努めています
   - こっちも Alpine Linux に似た設計思想ぽい
-- |[BusyBox](https://www.busybox.net/)
+- [BusyBox](https://www.busybox.net/)
   - なんだこれは。全然わからん。
   - > BusyBox は、多くの一般的な UNIX ユーティリティの小さなバージョンを 1 つの小さな実行可能ファイルに結合します。
     - 一応これっぽい。

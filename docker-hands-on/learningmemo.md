@@ -1,6 +1,6 @@
 ## docker run
 https://docs.docker.jp/engine/reference/commandline/run.html
-- 新しいコンテナでコマンドを 実行
+- >docker run コマンドは、まず指定されたイメージ上に書き込み可能なコンテナ・レイヤを create （作成）します。それから、指定されたコマンドを使って start （開始）します。この docker run は、 API の /containers/create の後で /containers/(id)/start を実行するのと同じです。以前に使っていたコンテナは docker start で再起動できます。全てのコンテナを表示するには docker ps -a を使います。
 
 ### docker run -it alpine:latestの意味
 #### -it

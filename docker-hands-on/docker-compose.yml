@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  front:
+    build:
+      context: ./front
+    ports:
+      - 3000:3000
+    networks:
+      app-network:
+        aliases:
+          - web
+
+  back:
+    build:
+      context: ./back
+    ports:
+      - 4000:4000
+    environment:
+      - OPENAI_KEY=${} #環境変数に設定してない場合は、直でAPIキーを書いて下さい。
+    networks:
+      app-network:
+        aliases:
+          - api
+
+networks:
+  app-network:
+    name: network-demo

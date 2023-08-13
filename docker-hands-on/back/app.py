@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def generate():
+    print("test")
     openai.api_key = os.getenv('OPENAI_KEY')
 
     response = openai.ChatCompletion.create(

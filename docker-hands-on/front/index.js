@@ -1,18 +1,21 @@
-// Expressライブラリをインポート
 const express = require('express');
+const axios = require('axios');
 
-// Expressを初期化
 const app = express();
-
-// リッスンするポートを定義
 const port = 3000;
 
-// ルートパス('/')へのGETリクエストのルートハンドラを定義
-app.get('/', (req, res) => {
-  res.send('Hello, Docker!!!!!');
+app.use(express.static('public'));
+
+app.post('/api', async (req, res) => {
+    console.log("testtests")
+    try {
+        const response = await axios.get('http://api:4000');
+        res.send(response.data);
+    } catch (error) {
+        console.error(`Error: ${error}`);
+    }
 });
 
-// 指定したポートでアプリをリッスン
 app.listen(port, () => {
-  console.log(`App running on http://localhost:${port}`);
+    console.log(`App running on http://localhost:${port}`);
 });

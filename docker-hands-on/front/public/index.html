@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+</head>
+<body class="grid items-center justify-items-center h-screen gap-4 bg-gray-200">
+    <div id="response" class="text-center">Waiting for response...</div>
+    <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700" hx-post="/api" hx-trigger="click" hx-swap="innerHTML" hx-target="#response">Click me!</button>
+</body>
+</html>

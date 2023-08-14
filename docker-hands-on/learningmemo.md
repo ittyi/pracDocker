@@ -96,4 +96,6 @@ https://docs.docker.jp/engine/reference/commandline/run.html
   - ![image](https://github.com/ittyi/pracDocker/assets/62760395/bb107c87-223b-4f06-a2d9-55e85b0e5780)
     - やっぱり Mac は違うっぽい
     - ![image](https://github.com/ittyi/pracDocker/assets/62760395/22b6ccc9-412b-4215-95c6-aa7251c31df8)
+      - XMLなんだなぁ
+      - sw_versコマンドとかはこれを読みにいってるぽいから普通に自作できそう
 

@@ -56,3 +56,44 @@ https://docs.docker.jp/engine/reference/commandline/run.html
 
 - >Docker Hubから取得（ダウンロード）したDockerイメージは、実行（run）することですぐにDockerコンテナとして利用できます。
   - まさに今 `docker run -it alpine:latest` でやったことだ。
+
+## cat /etc/os-release について
+### 改めて、etcフォルダってなんだっけ？
+- https://qiita.com/nys9302/items/a8ddeedd3cd9d0deb332
+  - > Linux設定のための各種ファイルを持っているディレクトリ。 etc 文字の意味の通り、そのシステム全体で使用する設定のようなエトセトラデータが保存されるフォルダ。
+システムのほぼすべての設定ファイルが存在するディレクトリ。
+例)/etc/registry
+- https://xtech.nikkei.com/it/article/Keyword/20071122/287804/#:~:text=%2Fetc%E3%81%AF%EF%BC%8CLinux%E3%8[…]%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82
+  - >Linuxディストリビューションのディレクトリ構成は，Linux関連の標準仕様を定めた「Linux Standard Base（LSB）」によって標準化されており ，/etc は必ず備わっていなければなりません。
+    - へー。
+
+- https://www.linuxmaster.jp/linux_skill/2010/02/06linux.html
+  - > このLinuxのディレクトリ一覧にも規格名があります。
+    > それは、『FHS(Filesystem Hierarchy Standard)』 という
+    > ディレクトリ構成規格になります。
+    > 以前はディストリビューションや、バージョンによって、
+    > 細かい点で差異があったのですが、現在はこのディレクトリ規格によって
+    > 統一化が図られています。
+    > （しかし、現在でも多くの点で差異はあるので、FHSはひとつの
+    > 指標くらいに捉えておいてください。）
+    > 代表的なものには、 IPアドレスとホスト名をDNSサーバー参照なしでも
+    > 名前の解決ができる「 hosts 」ファイルや、シェルの初期設定ファイル「 profile 」
+    > などがあります。
+    - hosts ファイルもそういえばここか
+
+### LSB とは
+- https://www.itmedia.co.jp/help/tips/linux/l0380.html
+  - > 現在までの Linux は，ディストリビューションごとにディレクトリ構成などに異なる点があるため，特定のディストリビューション上で開発されたアプリケーションは，ほかのディストリビューションでうまく動作しないことがあった。http://www.linuxbase.org/では，この問題に対し互換性を高めることを目的とし，アプリケーション開発者やディストリビュータが従うべき仕様を策定している。
+    - 確かに、ものによってフォルダの配置とかが違うとアプリのインストールとかくそめんどくさそうだもんなぁ
+    - プログラミング言語とかソフトウェアもインストールしたら勝手に Program Files に入ったりその他のやつが bin に勝手に入ってくれたりするのはそういう恩恵もあるのね
+   
+### バージョン確認
+- https://linuc.spa-miz.com/2021/03/18/linux-os-version-confirmation-method/
+  - cat /etc/os-release
+  - でバージョンを確認できる Linux OS は多そう。
+  - 仮に os-release って名前じゃなくても、その他の名前で etc フォルダのどこかには存在しそう。
+- https://ichibariki.com/entry/2017/01/14/120857
+  - ![image](https://github.com/ittyi/pracDocker/assets/62760395/bb107c87-223b-4f06-a2d9-55e85b0e5780)
+    - やっぱり Mac は違うっぽい
+    - ![image](https://github.com/ittyi/pracDocker/assets/62760395/22b6ccc9-412b-4215-95c6-aa7251c31df8)
+
